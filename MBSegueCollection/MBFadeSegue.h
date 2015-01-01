@@ -1,5 +1,5 @@
 //
-//  MBSegue.m
+//  MBFadeSegue.h
 //  MBSegueDemo
 //
 //  Created by Max Bothe on 01/01/15.
@@ -29,29 +29,10 @@
 
 #import "MBSegue.h"
 
-@implementation MBSegue
+@interface MBFadeSegue : MBSegue
 
-- (instancetype)initWithIdentifier:(NSString *)identifier
-                            source:(UIViewController *)source
-                       destination:(UIViewController *)destination
-{
-    self = [super initWithIdentifier:identifier source:source destination:destination];
-    if (self) {
-        self.type = MBSegueTypePresent;
-    }
-    return self;
-}
-
-- (void)showDestinationViewController
-{
-    if (self.type == MBSEgueTypeDismiss) {
-        [self.destinationViewController dismissViewControllerAnimated:NO
-                                                           completion:NULL];
-    } else {
-        [self.sourceViewController presentViewController:self.destinationViewController
-                                                animated:NO
-                                              completion:NULL];
-    }
-}
+@property (nonatomic, assign) NSTimeInterval duration;
+@property (nonatomic, assign) NSTimeInterval delay;
+@property (nonatomic, assign) UIViewAnimationOptions options;
 
 @end

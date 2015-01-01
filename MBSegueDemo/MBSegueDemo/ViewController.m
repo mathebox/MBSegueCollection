@@ -7,21 +7,32 @@
 //
 
 #import "ViewController.h"
-
-@interface ViewController ()
-
-@end
+#import "MBFadeSegue.h"
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+- (IBAction)unwindToFirstViewController:(UIStoryboardSegue *)segue {};
+
+- (UIStoryboardSegue *)segueForUnwindingToViewController:(UIViewController *)toViewController
+                                      fromViewController:(UIViewController *)fromViewController
+                                              identifier:(NSString *)identifier
+{
+    if ([identifier isEqualToString:@"Fade"]) {
+        MBSegue *fade = [[MBFadeSegue alloc] initWithIdentifier:identifier
+                                                                   source:fromViewController
+                                                              destination:toViewController];
+        fade.type = MBSEgueTypeDismiss;
+        return fade;
+    }
+
+    return [super segueForUnwindingToViewController:toViewController
+                                 fromViewController:fromViewController
+                                         identifier:identifier];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
 }
 
 @end

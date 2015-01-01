@@ -1,5 +1,5 @@
 //
-//  MBSegue.m
+//  MBFadeSegue.m
 //  MBSegueDemo
 //
 //  Created by Max Bothe on 01/01/15.
@@ -27,9 +27,9 @@
 //  SOFTWARE.
 //
 
-#import "MBSegue.h"
+#import "MBFadeSegue.h"
 
-@implementation MBSegue
+@implementation MBFadeSegue
 
 - (instancetype)initWithIdentifier:(NSString *)identifier
                             source:(UIViewController *)source
@@ -37,21 +37,35 @@
 {
     self = [super initWithIdentifier:identifier source:source destination:destination];
     if (self) {
-        self.type = MBSegueTypePresent;
+        self.duration = 0.5;
+        self.delay = 0.0;
+        self.options = UIViewAnimationOptionCurveEaseInOut;
     }
     return self;
 }
 
-- (void)showDestinationViewController
+- (void)perform
 {
-    if (self.type == MBSEgueTypeDismiss) {
-        [self.destinationViewController dismissViewControllerAnimated:NO
-                                                           completion:NULL];
-    } else {
-        [self.sourceViewController presentViewController:self.destinationViewController
-                                                animated:NO
-                                              completion:NULL];
-    }
+    UIViewController *source = self.sourceViewController;
+    UIViewController *destination = self.destinationViewController;
+
+    UIView *sourceSnapshot = [source.view snapshotViewAfterScreenUpdates:NO];
+//    UIView *destinationSnapshot = [destination.view snapshotViewAfterScreenUpdates:NO];
+
+    [source.view addSubview:destination.view];
+    [source.view addSubview:sourceSnapshot];
+
+    [UIView animateWithDuration:self.duration
+                          delay:self.delay
+                        options:self.options
+                     animations:^{
+                         sourceSnapshot.alpha = 0.0;
+                     }
+                     completion:^(BOOL finished) {
+                         [sourceSnapshot removeFromSuperview];
+                         [self showDestinationViewController];
+                     }
+     ];
 }
 
 @end

@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "MBFadeSegue.h"
+#import "MBSimpleSplitOpenSegue.h"
 
 @implementation ViewController
 
@@ -21,8 +22,14 @@
         MBSegue *fade = [[MBFadeSegue alloc] initWithIdentifier:identifier
                                                                    source:fromViewController
                                                               destination:toViewController];
-        fade.type = MBSEgueTypeDismiss;
+        fade.type = MBSegueTypeDismiss;
         return fade;
+    } else if ([identifier isEqualToString:@"SimpleSplitOpen"]) {
+        MBSegue *split = [[MBSimpleSplitOpenSegue alloc] initWithIdentifier:identifier
+                                                                     source:fromViewController
+                                                                destination:toViewController];
+        split.type = MBSegueTypeDismiss;
+        return split;
     }
 
     return [super segueForUnwindingToViewController:toViewController

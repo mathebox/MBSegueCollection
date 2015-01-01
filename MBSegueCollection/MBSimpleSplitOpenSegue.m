@@ -1,5 +1,5 @@
 //
-//  MBFadeSegue.m
+//  MBSimpleSplitSegue.m
 //  MBSegueDemo
 //
 //  Created by Max Bothe on 01/01/15.
@@ -27,9 +27,9 @@
 //  SOFTWARE.
 //
 
-#import "MBFadeSegue.h"
+#import "MBSimpleSplitOpenSegue.h"
 
-@implementation MBFadeSegue
+@implementation MBSimpleSplitOpenSegue
 
 - (instancetype)initWithIdentifier:(NSString *)identifier
                             source:(UIViewController *)source
@@ -37,8 +37,8 @@
 {
     self = [super initWithIdentifier:identifier source:source destination:destination];
     if (self) {
-        self.duration = 0.5;
-        self.delay = 0.0;
+        self.duration = 0.75;
+        self.delay = 0.25;
         self.options = UIViewAnimationOptionCurveEaseInOut;
     }
     return self;
@@ -49,19 +49,45 @@
     UIViewController *source = self.sourceViewController;
     UIViewController *destination = self.destinationViewController;
 
-    UIView *sourceSnapshot = [source.view snapshotViewAfterScreenUpdates:NO];
+    UIView *leftSide = [source.view snapshotViewAfterScreenUpdates:NO];
+    UIView *rightSide = [source.view snapshotViewAfterScreenUpdates:NO];
+
+    CAShapeLayer *leftMask = [[CAShapeLayer alloc] init];
+    CGRect leftMaskRect = CGRectMake(leftSide.bounds.origin.x, leftSide.bounds.origin.y,
+                                 leftSide.bounds.size.width/2, leftSide.bounds.size.height);
+    CGPathRef leftPath = CGPathCreateWithRect(leftMaskRect, NULL);
+    leftMask.path = leftPath;
+    CGPathRelease(leftPath);
+    leftSide.layer.mask = leftMask;
+
+    CAShapeLayer *rightMask = [[CAShapeLayer alloc] init];
+    CGRect rightMaskRect = CGRectMake(rightSide.bounds.size.width/2, rightSide.bounds.origin.y,
+                                      rightSide.bounds.size.width/2, rightSide.bounds.size.height);
+    CGPathRef rightPath = CGPathCreateWithRect(rightMaskRect, NULL);
+    rightMask.path = rightPath;
+    CGPathRelease(rightPath);
+    rightSide.layer.mask = rightMask;
 
     [source.view addSubview:destination.view];
-    [source.view addSubview:sourceSnapshot];
+    [source.view addSubview:leftSide];
+    [source.view addSubview:rightSide];
+
 
     [UIView animateWithDuration:self.duration
                           delay:self.delay
                         options:self.options
                      animations:^{
-                         sourceSnapshot.alpha = 0.0;
+                         CGPoint newLeftCenter = leftSide.center;
+                         newLeftCenter.x -= leftSide.bounds.size.width/2;
+                         leftSide.center = newLeftCenter;
+
+                         CGPoint newRightCenter = rightSide.center;
+                         newRightCenter.x += rightSide.bounds.size.width/2;
+                         rightSide.center = newRightCenter;
                      }
                      completion:^(BOOL finished) {
-                         [sourceSnapshot removeFromSuperview];
+                         [rightSide removeFromSuperview];
+                         [leftSide removeFromSuperview];
                          [self showDestinationViewController];
                      }
      ];

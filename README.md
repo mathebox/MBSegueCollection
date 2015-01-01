@@ -69,10 +69,19 @@ All segues can be used to present new view controllers or to dismiss one or mult
   }
   ```
 
+**Note: It’s very important to set the `type` of the MBSegue to `MBSegueTypeDismiss`. Otherwise it will break your application.**
+
 # Demo
 This section lists all segues and their customizable properties.
-## Fade
+### Fade
  ![fade segue](https://raw.githubusercontent.com/mathebox/MBSegueCollection/master/assets/segue_fade.gif)
+
+- **duration**
+- **delay**
+- **options** (UIViewAnimationOptions)
+
+### Simple Slide Open
+ ![simple slide open segue](https://raw.githubusercontent.com/mathebox/MBSegueCollection/master/assets/segue_simple_slide_open.gif)
 
 - **duration**
 - **delay**
@@ -80,6 +89,9 @@ This section lists all segues and their customizable properties.
 
 # Todo
 - On dismissal of multiple view controllers the following warning is thrown: `Unbalanced calls to begin/end appearance transitions for ViewController`
+- more segues
+- more segues
+- more segues
 
 # License
 The MIT License (MIT)

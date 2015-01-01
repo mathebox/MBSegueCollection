@@ -44,7 +44,7 @@
 
 - (void)showDestinationViewController
 {
-    if (self.type == MBSEgueTypeDismiss) {
+    if (self.type == MBSegueTypeDismiss) {
         [self.destinationViewController dismissViewControllerAnimated:NO
                                                            completion:NULL];
     } else {

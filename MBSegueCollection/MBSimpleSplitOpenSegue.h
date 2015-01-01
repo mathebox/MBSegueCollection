@@ -1,5 +1,5 @@
 //
-//  MBSegue.h
+//  MBSimpleSplitSegue.h
 //  MBSegueDemo
 //
 //  Created by Max Bothe on 01/01/15.
@@ -27,17 +27,12 @@
 //  SOFTWARE.
 //
 
-#import <UIKit/UIKit.h>
+#import "MBSegue.h"
 
-typedef NS_ENUM(NSUInteger, MBSegueType) {
-    MBSegueTypePresent,
-    MBSegueTypeDismiss
-};
+@interface MBSimpleSplitOpenSegue : MBSegue
 
-@interface MBSegue : UIStoryboardSegue
-
-@property (nonatomic, assign) MBSegueType type;
-
-- (void)showDestinationViewController;
+@property (nonatomic, assign) NSTimeInterval duration;
+@property (nonatomic, assign) NSTimeInterval delay;
+@property (nonatomic, assign) UIViewAnimationOptions options;
 
 @end

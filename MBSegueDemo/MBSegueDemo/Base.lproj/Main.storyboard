@@ -32,11 +32,23 @@
                                     <segue destination="gV9-Tw-P6E" kind="custom" customClass="MBFadeSegue" id="oRh-mT-Hnd"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zBy-gi-304">
+                                <rect key="frame" x="238" y="103" width="124" height="30"/>
+                                <state key="normal" title="Simple Split Open">
+                                    <color key="titleColor" red="1" green="0.94901960780000005" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="gV9-Tw-P6E" kind="custom" customClass="MBSimpleSplitOpenSegue" id="hce-zY-Nch"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.54117647059999996" green="0.12549019610000001" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="dBe-EN-ODC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="2Ed-fJ-1jq"/>
+                            <constraint firstAttribute="centerX" secondItem="zBy-gi-304" secondAttribute="centerX" id="LFH-nU-G3C"/>
                             <constraint firstAttribute="centerX" secondItem="dBe-EN-ODC" secondAttribute="centerX" id="ZXC-Ia-Sff"/>
+                            <constraint firstItem="zBy-gi-304" firstAttribute="top" secondItem="UEI-eR-xgQ" secondAttribute="bottom" constant="8" id="jnc-vc-Nsd"/>
                             <constraint firstAttribute="centerX" secondItem="UEI-eR-xgQ" secondAttribute="centerX" id="rkM-WJ-L0S"/>
                             <constraint firstItem="UEI-eR-xgQ" firstAttribute="top" secondItem="dBe-EN-ODC" secondAttribute="bottom" constant="8" id="tvq-Cb-UPR"/>
                         </constraints>
@@ -74,12 +86,21 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p7g-0f-7Xc">
-                                <rect key="frame" x="264" y="66" width="72" height="30"/>
-                                <state key="normal" title="Fade back">
+                                <rect key="frame" x="283" y="66" width="35" height="30"/>
+                                <state key="normal" title="Fade">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="Ljl-Ii-CSj" kind="unwind" identifier="Fade" unwindAction="unwindToFirstViewController:" id="yjI-9R-SBW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4sg-kD-eTe">
+                                <rect key="frame" x="238" y="104" width="124" height="30"/>
+                                <state key="normal" title="Simple Split Open">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Ljl-Ii-CSj" kind="unwind" identifier="SimpleSplitOpen" unwindAction="unwindToFirstViewController:" id="L6o-Lb-GoK"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -87,9 +108,11 @@
                         <constraints>
                             <constraint firstItem="WFT-Jq-8XI" firstAttribute="top" secondItem="yzO-LM-SJN" secondAttribute="bottom" constant="20" id="KQQ-AQ-6gI"/>
                             <constraint firstAttribute="centerX" secondItem="yzO-LM-SJN" secondAttribute="centerX" constant="-0.5" id="WJB-fG-Fph"/>
+                            <constraint firstItem="4sg-kD-eTe" firstAttribute="top" secondItem="p7g-0f-7Xc" secondAttribute="bottom" constant="8" id="Z9j-UM-t0y"/>
                             <constraint firstItem="p7g-0f-7Xc" firstAttribute="top" secondItem="60v-7V-hwu" secondAttribute="bottom" constant="8" id="aUB-te-mnj"/>
                             <constraint firstItem="60v-7V-hwu" firstAttribute="top" secondItem="Yxf-dY-B1Z" secondAttribute="bottom" constant="8" id="cEh-4H-0Ld"/>
                             <constraint firstAttribute="centerX" secondItem="60v-7V-hwu" secondAttribute="centerX" id="r4b-Yf-1sT"/>
+                            <constraint firstAttribute="centerX" secondItem="4sg-kD-eTe" secondAttribute="centerX" id="xrN-jt-zU4"/>
                             <constraint firstAttribute="centerX" secondItem="p7g-0f-7Xc" secondAttribute="centerX" id="ydG-WH-wAF"/>
                         </constraints>
                     </view>
@@ -127,11 +150,23 @@
                                     <segue destination="mUx-Wq-acS" kind="unwind" identifier="Fade" unwindAction="unwindToFirstViewController:" id="aBS-my-q0q"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbL-YS-bMK">
+                                <rect key="frame" x="238" y="103" width="124" height="30"/>
+                                <state key="normal" title="Simple Split Open">
+                                    <color key="titleColor" red="0.54117647059999996" green="0.12549019610000001" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="mUx-Wq-acS" kind="unwind" identifier="SimpleSplitOpen" unwindAction="unwindToFirstViewController:" id="qih-4i-qSO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.94901960780000005" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="mbL-YS-bMK" secondAttribute="centerX" id="WHP-6L-ojs"/>
                             <constraint firstItem="vfC-An-2Rm" firstAttribute="top" secondItem="8t5-sp-6Zf" secondAttribute="bottom" constant="8" id="WOm-3O-YHm"/>
                             <constraint firstAttribute="centerX" secondItem="vfC-An-2Rm" secondAttribute="centerX" id="lGI-09-sQF"/>
+                            <constraint firstItem="mbL-YS-bMK" firstAttribute="top" secondItem="JIX-mA-Q5M" secondAttribute="bottom" constant="8" id="sEp-ch-Jmr"/>
                             <constraint firstItem="JIX-mA-Q5M" firstAttribute="top" secondItem="vfC-An-2Rm" secondAttribute="bottom" constant="8" id="x0m-dE-cVO"/>
                             <constraint firstAttribute="centerX" secondItem="JIX-mA-Q5M" secondAttribute="centerX" id="y7O-bm-cLm"/>
                         </constraints>
@@ -143,4 +178,7 @@
             <point key="canvasLocation" x="2000" y="522"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="hce-zY-Nch"/>
+    </inferredMetricsTieBreakers>
 </document>

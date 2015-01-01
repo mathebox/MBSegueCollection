@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "MBFadeSegue.h"
 #import "MBSimpleSplitOpenSegue.h"
+#import "MBSimpleSplitCloseSegue.h"
 
 @implementation ViewController
 
@@ -28,6 +29,12 @@
         MBSegue *split = [[MBSimpleSplitOpenSegue alloc] initWithIdentifier:identifier
                                                                      source:fromViewController
                                                                 destination:toViewController];
+        split.type = MBSegueTypeDismiss;
+        return split;
+    } else if ([identifier isEqualToString:@"SimpleSplitClose"]) {
+        MBSegue *split = [[MBSimpleSplitCloseSegue alloc] initWithIdentifier:identifier
+                                                                      source:fromViewController
+                                                                 destination:toViewController];
         split.type = MBSegueTypeDismiss;
         return split;
     }

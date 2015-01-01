@@ -1,6 +1,6 @@
 //
 //  MBFadeSegue.m
-//  MBSegueDemo
+//  MBSegueCollection
 //
 //  Created by Max Bothe on 01/01/15.
 //

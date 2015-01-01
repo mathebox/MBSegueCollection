@@ -42,11 +42,23 @@
                                     <segue destination="gV9-Tw-P6E" kind="custom" customClass="MBSimpleSplitOpenSegue" id="hce-zY-Nch"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJR-hD-zw0">
+                                <rect key="frame" x="237" y="141" width="126" height="30"/>
+                                <state key="normal" title="Simple Split Close">
+                                    <color key="titleColor" red="1" green="0.94901960780000005" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="gV9-Tw-P6E" kind="custom" customClass="MBSimpleSplitCloseSegue" id="jsY-zt-GiL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.54117647059999996" green="0.12549019610000001" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="dBe-EN-ODC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="2Ed-fJ-1jq"/>
+                            <constraint firstAttribute="centerX" secondItem="MJR-hD-zw0" secondAttribute="centerX" id="HqL-2B-RnK"/>
                             <constraint firstAttribute="centerX" secondItem="zBy-gi-304" secondAttribute="centerX" id="LFH-nU-G3C"/>
+                            <constraint firstItem="MJR-hD-zw0" firstAttribute="top" secondItem="zBy-gi-304" secondAttribute="bottom" constant="8" id="PZf-Yy-HMX"/>
                             <constraint firstAttribute="centerX" secondItem="dBe-EN-ODC" secondAttribute="centerX" id="ZXC-Ia-Sff"/>
                             <constraint firstItem="zBy-gi-304" firstAttribute="top" secondItem="UEI-eR-xgQ" secondAttribute="bottom" constant="8" id="jnc-vc-Nsd"/>
                             <constraint firstAttribute="centerX" secondItem="UEI-eR-xgQ" secondAttribute="centerX" id="rkM-WJ-L0S"/>
@@ -103,10 +115,21 @@
                                     <segue destination="Ljl-Ii-CSj" kind="unwind" identifier="SimpleSplitOpen" unwindAction="unwindToFirstViewController:" id="L6o-Lb-GoK"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5US-iq-6Gl">
+                                <rect key="frame" x="237" y="142" width="126" height="30"/>
+                                <state key="normal" title="Simple Split Close">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Ljl-Ii-CSj" kind="unwind" identifier="SimpleSplitClose" unwindAction="unwindToFirstViewController:" id="r5T-ch-C9f"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="5US-iq-6Gl" firstAttribute="top" secondItem="4sg-kD-eTe" secondAttribute="bottom" constant="8" id="7de-xg-9xi"/>
                             <constraint firstItem="WFT-Jq-8XI" firstAttribute="top" secondItem="yzO-LM-SJN" secondAttribute="bottom" constant="20" id="KQQ-AQ-6gI"/>
+                            <constraint firstAttribute="centerX" secondItem="5US-iq-6Gl" secondAttribute="centerX" id="LFX-Qy-UH5"/>
                             <constraint firstAttribute="centerX" secondItem="yzO-LM-SJN" secondAttribute="centerX" constant="-0.5" id="WJB-fG-Fph"/>
                             <constraint firstItem="4sg-kD-eTe" firstAttribute="top" secondItem="p7g-0f-7Xc" secondAttribute="bottom" constant="8" id="Z9j-UM-t0y"/>
                             <constraint firstItem="p7g-0f-7Xc" firstAttribute="top" secondItem="60v-7V-hwu" secondAttribute="bottom" constant="8" id="aUB-te-mnj"/>
@@ -160,12 +183,24 @@
                                     <segue destination="mUx-Wq-acS" kind="unwind" identifier="SimpleSplitOpen" unwindAction="unwindToFirstViewController:" id="qih-4i-qSO"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NFP-ta-ehc">
+                                <rect key="frame" x="237" y="141" width="126" height="30"/>
+                                <state key="normal" title="Simple Split Close">
+                                    <color key="titleColor" red="0.54117647059999996" green="0.12549019610000001" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="mUx-Wq-acS" kind="unwind" identifier="SimpleSplitClose" unwindAction="unwindToFirstViewController:" id="0QU-rP-gns"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.94901960780000005" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="mbL-YS-bMK" secondAttribute="centerX" id="WHP-6L-ojs"/>
                             <constraint firstItem="vfC-An-2Rm" firstAttribute="top" secondItem="8t5-sp-6Zf" secondAttribute="bottom" constant="8" id="WOm-3O-YHm"/>
+                            <constraint firstItem="NFP-ta-ehc" firstAttribute="top" secondItem="mbL-YS-bMK" secondAttribute="bottom" constant="8" id="cVj-gk-4hK"/>
                             <constraint firstAttribute="centerX" secondItem="vfC-An-2Rm" secondAttribute="centerX" id="lGI-09-sQF"/>
+                            <constraint firstAttribute="centerX" secondItem="NFP-ta-ehc" secondAttribute="centerX" id="reg-zC-LUj"/>
                             <constraint firstItem="mbL-YS-bMK" firstAttribute="top" secondItem="JIX-mA-Q5M" secondAttribute="bottom" constant="8" id="sEp-ch-Jmr"/>
                             <constraint firstItem="JIX-mA-Q5M" firstAttribute="top" secondItem="vfC-An-2Rm" secondAttribute="bottom" constant="8" id="x0m-dE-cVO"/>
                             <constraint firstAttribute="centerX" secondItem="JIX-mA-Q5M" secondAttribute="centerX" id="y7O-bm-cLm"/>
@@ -179,6 +214,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="hce-zY-Nch"/>
+        <segue reference="jsY-zt-GiL"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -1,5 +1,5 @@
 //
-//  MBSimpleSplitSegue.m
+//  MBSimpleSplitClose.m
 //  MBSegueCollection
 //
 //  Created by Max Bothe on 01/01/15.
@@ -27,9 +27,9 @@
 //  SOFTWARE.
 //
 
-#import "MBSimpleSplitOpenSegue.h"
+#import "MBSimpleSplitCloseSegue.h"
 
-@implementation MBSimpleSplitOpenSegue
+@implementation MBSimpleSplitCloseSegue
 
 - (instancetype)initWithIdentifier:(NSString *)identifier
                             source:(UIViewController *)source
@@ -49,12 +49,19 @@
     UIViewController *source = self.sourceViewController;
     UIViewController *destination = self.destinationViewController;
 
-    UIView *leftSide = [source.view snapshotViewAfterScreenUpdates:NO];
-    UIView *rightSide = [source.view snapshotViewAfterScreenUpdates:NO];
+    UIGraphicsBeginImageContextWithOptions(destination.view.bounds.size, NO, 0);
+
+    [destination.view drawViewHierarchyInRect:destination.view.bounds afterScreenUpdates:YES];
+
+    UIImage *destinationImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+
+    UIView *leftSide = [[UIImageView alloc] initWithImage:destinationImage];
+    UIView *rightSide = [[UIImageView alloc] initWithImage:destinationImage];
 
     CAShapeLayer *leftMask = [[CAShapeLayer alloc] init];
     CGRect leftMaskRect = CGRectMake(leftSide.bounds.origin.x, leftSide.bounds.origin.y,
-                                 leftSide.bounds.size.width/2, leftSide.bounds.size.height);
+                                     leftSide.bounds.size.width/2, leftSide.bounds.size.height);
     CGPathRef leftPath = CGPathCreateWithRect(leftMaskRect, NULL);
     leftMask.path = leftPath;
     CGPathRelease(leftPath);
@@ -68,21 +75,29 @@
     CGPathRelease(rightPath);
     rightSide.layer.mask = rightMask;
 
-    [source.view addSubview:destination.view];
+    // Move sides out of screen
+    CGPoint newLeftCenter = leftSide.center;
+    newLeftCenter.x -= leftSide.bounds.size.width/2;
+    leftSide.center = newLeftCenter;
+
+    CGPoint newRightCenter = rightSide.center;
+    newRightCenter.x += rightSide.bounds.size.width/2;
+    rightSide.center = newRightCenter;
+
+    // Add subviews
     [source.view addSubview:leftSide];
     [source.view addSubview:rightSide];
-
 
     [UIView animateWithDuration:self.duration
                           delay:self.delay
                         options:self.options
                      animations:^{
                          CGPoint newLeftCenter = leftSide.center;
-                         newLeftCenter.x -= leftSide.bounds.size.width/2;
+                         newLeftCenter.x += leftSide.bounds.size.width/2;
                          leftSide.center = newLeftCenter;
 
                          CGPoint newRightCenter = rightSide.center;
-                         newRightCenter.x += rightSide.bounds.size.width/2;
+                         newRightCenter.x -= rightSide.bounds.size.width/2;
                          rightSide.center = newRightCenter;
                      }
                      completion:^(BOOL finished) {

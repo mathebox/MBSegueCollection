@@ -87,6 +87,13 @@ This section lists all segues and their customizable properties.
 - **delay**
 - **options** (UIViewAnimationOptions)
 
+### Simple Slide Close
+ ![simple slide open segue](https://raw.githubusercontent.com/mathebox/MBSegueCollection/master/assets/segue_simple_slide_close.gif)
+
+- **duration**
+- **delay**
+- **options** (UIViewAnimationOptions)
+
 # Todo
 - On dismissal of multiple view controllers the following warning is thrown: `Unbalanced calls to begin/end appearance transitions for ViewController`
 - more segues

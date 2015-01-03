@@ -35,10 +35,16 @@
                             source:(UIViewController *)source
                        destination:(UIViewController *)destination
 {
+    if ([self isMemberOfClass:[MBSegue class]]) {
+        [self doesNotRecognizeSelector:_cmd];
+        return nil;
+    }
+
     self = [super initWithIdentifier:identifier source:source destination:destination];
     if (self) {
         self.type = MBSegueTypePresent;
     }
+
     return self;
 }
 

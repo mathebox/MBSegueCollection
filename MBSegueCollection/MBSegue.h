@@ -38,6 +38,13 @@ typedef NS_ENUM(NSUInteger, MBSegueType) {
 
 @property (nonatomic, assign) MBSegueType type;
 
+- (UIView *)sourceViewSnapshot;
+- (UIView *)destinationViewSnapshot;
+
+- (void)maskView:(UIView *)view withRect:(CGRect)rect;
+- (void)maskLeftSideOfView:(UIView *)view;
+- (void)maskRightSideOfView:(UIView *)view;
+
 - (void)showDestinationViewController;
 
 @end

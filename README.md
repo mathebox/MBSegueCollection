@@ -95,7 +95,6 @@ This section lists all segues and their customizable properties.
 - **options** (UIViewAnimationOptions)
 
 # Todo
-- On dismissal of multiple view controllers the following warning is thrown: `Unbalanced calls to begin/end appearance transitions for ViewController`
 - more segues
 - more segues
 - more segues

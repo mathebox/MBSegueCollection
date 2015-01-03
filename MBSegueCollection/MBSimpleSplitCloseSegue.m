@@ -46,34 +46,13 @@
 
 - (void)perform
 {
-    UIViewController *source = self.sourceViewController;
-    UIViewController *destination = self.destinationViewController;
+    UIViewController *sourceViewController = self.sourceViewController;
 
-    UIGraphicsBeginImageContextWithOptions(destination.view.bounds.size, NO, 0);
+    UIView *leftSide = self.destinationViewSnapshot;
+    UIView *rightSide = self.destinationViewSnapshot;
 
-    [destination.view drawViewHierarchyInRect:destination.view.bounds afterScreenUpdates:YES];
-
-    UIImage *destinationImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-
-    UIView *leftSide = [[UIImageView alloc] initWithImage:destinationImage];
-    UIView *rightSide = [[UIImageView alloc] initWithImage:destinationImage];
-
-    CAShapeLayer *leftMask = [[CAShapeLayer alloc] init];
-    CGRect leftMaskRect = CGRectMake(leftSide.bounds.origin.x, leftSide.bounds.origin.y,
-                                     leftSide.bounds.size.width/2, leftSide.bounds.size.height);
-    CGPathRef leftPath = CGPathCreateWithRect(leftMaskRect, NULL);
-    leftMask.path = leftPath;
-    CGPathRelease(leftPath);
-    leftSide.layer.mask = leftMask;
-
-    CAShapeLayer *rightMask = [[CAShapeLayer alloc] init];
-    CGRect rightMaskRect = CGRectMake(rightSide.bounds.size.width/2, rightSide.bounds.origin.y,
-                                      rightSide.bounds.size.width/2, rightSide.bounds.size.height);
-    CGPathRef rightPath = CGPathCreateWithRect(rightMaskRect, NULL);
-    rightMask.path = rightPath;
-    CGPathRelease(rightPath);
-    rightSide.layer.mask = rightMask;
+    [self maskLeftSideOfView:leftSide];
+    [self maskRightSideOfView:rightSide];
 
     // Move sides out of screen
     CGPoint newLeftCenter = leftSide.center;
@@ -85,8 +64,8 @@
     rightSide.center = newRightCenter;
 
     // Add subviews
-    [source.view addSubview:leftSide];
-    [source.view addSubview:rightSide];
+    [sourceViewController.view addSubview:leftSide];
+    [sourceViewController.view addSubview:rightSide];
 
     [UIView animateWithDuration:self.duration
                           delay:self.delay

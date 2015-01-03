@@ -42,6 +42,46 @@
     return self;
 }
 
+- (UIView *)sourceViewSnapshot
+{
+    UIViewController *sourceViewController = self.sourceViewController;
+    return [sourceViewController.view snapshotViewAfterScreenUpdates:NO];
+}
+
+- (UIView *)destinationViewSnapshot
+{
+    UIViewController *destinationViewController = self.destinationViewController;
+    UIGraphicsBeginImageContextWithOptions(destinationViewController.view.bounds.size, NO, 0);
+    [destinationViewController.view drawViewHierarchyInRect:destinationViewController.view.bounds
+                                         afterScreenUpdates:YES];
+    UIImage *destinationViewImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return [[UIImageView alloc] initWithImage:destinationViewImage];
+}
+
+- (void)maskView:(UIView *)view withRect:(CGRect)rect
+{
+    CAShapeLayer *mask = [[CAShapeLayer alloc] init];
+    CGPathRef path = CGPathCreateWithRect(rect, NULL);
+    mask.path = path;
+    CGPathRelease(path);
+    view.layer.mask = mask;
+}
+
+- (void)maskLeftSideOfView:(UIView *)view
+{
+    CGRect rect = CGRectMake(view.bounds.origin.x, view.bounds.origin.y,
+                             view.bounds.size.width/2, view.bounds.size.height);
+    [self maskView:view withRect:rect];
+}
+
+- (void)maskRightSideOfView:(UIView *)view;
+{
+    CGRect rect = CGRectMake(view.bounds.size.width/2, view.bounds.origin.y,
+                             view.bounds.size.width/2, view.bounds.size.height);
+    [self maskView:view withRect:rect];
+}
+
 - (void)showDestinationViewController
 {
     if (self.type == MBSegueTypeDismiss) {

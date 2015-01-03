@@ -46,22 +46,23 @@
 
 - (void)perform
 {
-    UIViewController *source = self.sourceViewController;
-    UIViewController *destination = self.destinationViewController;
+    UIViewController *sourceViewController = self.sourceViewController;
 
-    UIView *sourceSnapshot = [source.view snapshotViewAfterScreenUpdates:NO];
+    UIView *sourceViewSnapshot = self.sourceViewSnapshot;
+    UIView *destinationViewSnapshot = self.destinationViewSnapshot;
 
-    [source.view addSubview:destination.view];
-    [source.view addSubview:sourceSnapshot];
+    [sourceViewController.view addSubview:destinationViewSnapshot];
+    [sourceViewController.view addSubview:sourceViewSnapshot];
 
     [UIView animateWithDuration:self.duration
                           delay:self.delay
                         options:self.options
                      animations:^{
-                         sourceSnapshot.alpha = 0.0;
+                         sourceViewSnapshot.alpha = 0.0;
                      }
                      completion:^(BOOL finished) {
-                         [sourceSnapshot removeFromSuperview];
+                         [sourceViewSnapshot removeFromSuperview];
+                         [destinationViewSnapshot removeFromSuperview];
                          [self showDestinationViewController];
                      }
      ];

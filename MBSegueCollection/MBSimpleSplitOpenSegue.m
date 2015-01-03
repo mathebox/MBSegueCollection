@@ -46,32 +46,18 @@
 
 - (void)perform
 {
-    UIViewController *source = self.sourceViewController;
-    UIViewController *destination = self.destinationViewController;
+    UIViewController *sourceViewController = self.sourceViewController;
 
-    UIView *leftSide = [source.view snapshotViewAfterScreenUpdates:NO];
-    UIView *rightSide = [source.view snapshotViewAfterScreenUpdates:NO];
+    UIView *destinationViewSnapshot = self.destinationViewSnapshot;
+    UIView *leftSide = self.sourceViewSnapshot;
+    UIView *rightSide = self.sourceViewSnapshot;
 
-    CAShapeLayer *leftMask = [[CAShapeLayer alloc] init];
-    CGRect leftMaskRect = CGRectMake(leftSide.bounds.origin.x, leftSide.bounds.origin.y,
-                                 leftSide.bounds.size.width/2, leftSide.bounds.size.height);
-    CGPathRef leftPath = CGPathCreateWithRect(leftMaskRect, NULL);
-    leftMask.path = leftPath;
-    CGPathRelease(leftPath);
-    leftSide.layer.mask = leftMask;
+    [self maskLeftSideOfView:leftSide];
+    [self maskRightSideOfView:rightSide];
 
-    CAShapeLayer *rightMask = [[CAShapeLayer alloc] init];
-    CGRect rightMaskRect = CGRectMake(rightSide.bounds.size.width/2, rightSide.bounds.origin.y,
-                                      rightSide.bounds.size.width/2, rightSide.bounds.size.height);
-    CGPathRef rightPath = CGPathCreateWithRect(rightMaskRect, NULL);
-    rightMask.path = rightPath;
-    CGPathRelease(rightPath);
-    rightSide.layer.mask = rightMask;
-
-    [source.view addSubview:destination.view];
-    [source.view addSubview:leftSide];
-    [source.view addSubview:rightSide];
-
+    [sourceViewController.view addSubview:destinationViewSnapshot];
+    [sourceViewController.view addSubview:leftSide];
+    [sourceViewController.view addSubview:rightSide];
 
     [UIView animateWithDuration:self.duration
                           delay:self.delay
@@ -88,6 +74,7 @@
                      completion:^(BOOL finished) {
                          [rightSide removeFromSuperview];
                          [leftSide removeFromSuperview];
+                         [destinationViewSnapshot removeFromSuperview];
                          [self showDestinationViewController];
                      }
      ];

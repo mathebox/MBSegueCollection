@@ -1,8 +1,8 @@
 //
-//  MBSegue.h
+//  MBGateOpenInsideSegue.h
 //  MBSegueCollection
 //
-//  Created by Max Bothe on 01/01/15.
+//  Created by Max Bothe on 03/01/15.
 //
 //  The MIT License (MIT)
 //
@@ -27,29 +27,8 @@
 //  SOFTWARE.
 //
 
-#import <UIKit/UIKit.h>
+#import "MBSegue.h"
 
-typedef NS_ENUM(NSUInteger, MBSegueType) {
-    MBSegueTypePresent,
-    MBSegueTypeDismiss
-};
-
-@interface MBSegue : UIStoryboardSegue
-
-@property (nonatomic, assign) MBSegueType type;
-@property (nonatomic, assign) NSTimeInterval duration;
-@property (nonatomic, assign) NSTimeInterval delay;
-@property (nonatomic, assign) UIViewAnimationOptions options;
-
-- (UIView *)sourceViewSnapshot;
-- (UIView *)destinationViewSnapshot;
-
-- (void)maskView:(UIView *)view withRect:(CGRect)rect;
-- (void)maskLeftSideOfView:(UIView *)view;
-- (void)maskRightSideOfView:(UIView *)view;
-- (void)setAnchorPoint:(CGPoint)anchorPoint forView:(UIView *)view;
-
-
-- (void)showDestinationViewController;
+@interface MBGateOpenInsideSegue : MBSegue
 
 @end

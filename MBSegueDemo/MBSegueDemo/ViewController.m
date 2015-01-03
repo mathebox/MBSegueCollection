@@ -10,6 +10,7 @@
 #import "MBFadeSegue.h"
 #import "MBSimpleSplitOpenSegue.h"
 #import "MBSimpleSplitCloseSegue.h"
+#import "MBGateOpenInsideSegue.h"
 
 @implementation ViewController
 
@@ -35,6 +36,12 @@
         MBSegue *split = [[MBSimpleSplitCloseSegue alloc] initWithIdentifier:identifier
                                                                       source:fromViewController
                                                                  destination:toViewController];
+        split.type = MBSegueTypeDismiss;
+        return split;
+    } else if ([identifier isEqualToString:@"GateOpenInside"]) {
+        MBSegue *split = [[MBGateOpenInsideSegue alloc] initWithIdentifier:identifier
+                                                                    source:fromViewController
+                                                               destination:toViewController];
         split.type = MBSegueTypeDismiss;
         return split;
     }

@@ -52,13 +52,25 @@
                                     <segue destination="gV9-Tw-P6E" kind="custom" customClass="MBSimpleSplitCloseSegue" id="jsY-zt-GiL"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEL-X9-WbE">
+                                <rect key="frame" x="240" y="179" width="120" height="30"/>
+                                <state key="normal" title="Gate Open Inside">
+                                    <color key="titleColor" red="1" green="0.94901960780000005" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="gV9-Tw-P6E" kind="custom" customClass="MBGateOpenInsideSegue" id="Y7f-On-cSx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.54117647059999996" green="0.12549019610000001" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="dBe-EN-ODC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="2Ed-fJ-1jq"/>
+                            <constraint firstItem="fEL-X9-WbE" firstAttribute="top" secondItem="MJR-hD-zw0" secondAttribute="bottom" constant="8" id="EXB-qN-hGx"/>
                             <constraint firstAttribute="centerX" secondItem="MJR-hD-zw0" secondAttribute="centerX" id="HqL-2B-RnK"/>
                             <constraint firstAttribute="centerX" secondItem="zBy-gi-304" secondAttribute="centerX" id="LFH-nU-G3C"/>
                             <constraint firstItem="MJR-hD-zw0" firstAttribute="top" secondItem="zBy-gi-304" secondAttribute="bottom" constant="8" id="PZf-Yy-HMX"/>
+                            <constraint firstAttribute="centerX" secondItem="fEL-X9-WbE" secondAttribute="centerX" id="YaT-Qy-UXU"/>
                             <constraint firstAttribute="centerX" secondItem="dBe-EN-ODC" secondAttribute="centerX" id="ZXC-Ia-Sff"/>
                             <constraint firstItem="zBy-gi-304" firstAttribute="top" secondItem="UEI-eR-xgQ" secondAttribute="bottom" constant="8" id="jnc-vc-Nsd"/>
                             <constraint firstAttribute="centerX" secondItem="UEI-eR-xgQ" secondAttribute="centerX" id="rkM-WJ-L0S"/>
@@ -124,6 +136,15 @@
                                     <segue destination="Ljl-Ii-CSj" kind="unwind" identifier="SimpleSplitClose" unwindAction="unwindToFirstViewController:" id="r5T-ch-C9f"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eIe-nA-XN6">
+                                <rect key="frame" x="240" y="180" width="120" height="30"/>
+                                <state key="normal" title="Gate Open Inside">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Ljl-Ii-CSj" kind="unwind" identifier="GateOpenInside" unwindAction="unwindToFirstViewController:" id="OgR-rr-npj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -135,6 +156,8 @@
                             <constraint firstItem="p7g-0f-7Xc" firstAttribute="top" secondItem="60v-7V-hwu" secondAttribute="bottom" constant="8" id="aUB-te-mnj"/>
                             <constraint firstItem="60v-7V-hwu" firstAttribute="top" secondItem="Yxf-dY-B1Z" secondAttribute="bottom" constant="8" id="cEh-4H-0Ld"/>
                             <constraint firstAttribute="centerX" secondItem="60v-7V-hwu" secondAttribute="centerX" id="r4b-Yf-1sT"/>
+                            <constraint firstAttribute="centerX" secondItem="eIe-nA-XN6" secondAttribute="centerX" id="rfA-S4-CNF"/>
+                            <constraint firstItem="eIe-nA-XN6" firstAttribute="top" secondItem="5US-iq-6Gl" secondAttribute="bottom" constant="8" id="wm7-yH-lTx"/>
                             <constraint firstAttribute="centerX" secondItem="4sg-kD-eTe" secondAttribute="centerX" id="xrN-jt-zU4"/>
                             <constraint firstAttribute="centerX" secondItem="p7g-0f-7Xc" secondAttribute="centerX" id="ydG-WH-wAF"/>
                         </constraints>
@@ -193,9 +216,21 @@
                                     <segue destination="mUx-Wq-acS" kind="unwind" identifier="SimpleSplitClose" unwindAction="unwindToFirstViewController:" id="0QU-rP-gns"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M0Q-Hf-nnH">
+                                <rect key="frame" x="240" y="179" width="120" height="30"/>
+                                <state key="normal" title="Gate Open Inside">
+                                    <color key="titleColor" red="0.54117647059999996" green="0.12549019610000001" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="mUx-Wq-acS" kind="unwind" identifier="GateOpenInside" unwindAction="unwindToFirstViewController:" id="ppn-U8-Kgg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.94901960780000005" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="M0Q-Hf-nnH" firstAttribute="top" secondItem="NFP-ta-ehc" secondAttribute="bottom" constant="8" id="9m3-ud-Iau"/>
+                            <constraint firstAttribute="centerX" secondItem="M0Q-Hf-nnH" secondAttribute="centerX" id="Epd-Wr-W1L"/>
                             <constraint firstAttribute="centerX" secondItem="mbL-YS-bMK" secondAttribute="centerX" id="WHP-6L-ojs"/>
                             <constraint firstItem="vfC-An-2Rm" firstAttribute="top" secondItem="8t5-sp-6Zf" secondAttribute="bottom" constant="8" id="WOm-3O-YHm"/>
                             <constraint firstItem="NFP-ta-ehc" firstAttribute="top" secondItem="mbL-YS-bMK" secondAttribute="bottom" constant="8" id="cVj-gk-4hK"/>
@@ -214,6 +249,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="jsY-zt-GiL"/>
+        <segue reference="Y7f-On-cSx"/>
     </inferredMetricsTieBreakers>
 </document>

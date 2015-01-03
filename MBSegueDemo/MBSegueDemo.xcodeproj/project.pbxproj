@@ -18,6 +18,7 @@
 		506479D21A55B5280005983C /* MBFadeSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 506479D11A55B5280005983C /* MBFadeSegue.m */; };
 		506479D51A55EC570005983C /* MBSimpleSplitOpenSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 506479D41A55EC570005983C /* MBSimpleSplitOpenSegue.m */; };
 		506479D81A55FC980005983C /* MBSimpleSplitCloseSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 506479D71A55FC980005983C /* MBSimpleSplitCloseSegue.m */; };
+		506479DB1A587F7F0005983C /* MBGateOpenInsideSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 506479DA1A587F7F0005983C /* MBGateOpenInsideSegue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,8 @@
 		506479D41A55EC570005983C /* MBSimpleSplitOpenSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBSimpleSplitOpenSegue.m; path = ../MBSegueCollection/MBSimpleSplitOpenSegue.m; sourceTree = "<group>"; };
 		506479D61A55FC980005983C /* MBSimpleSplitCloseSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBSimpleSplitCloseSegue.h; path = ../MBSegueCollection/MBSimpleSplitCloseSegue.h; sourceTree = "<group>"; };
 		506479D71A55FC980005983C /* MBSimpleSplitCloseSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBSimpleSplitCloseSegue.m; path = ../MBSegueCollection/MBSimpleSplitCloseSegue.m; sourceTree = "<group>"; };
+		506479D91A587F7F0005983C /* MBGateOpenInsideSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBGateOpenInsideSegue.h; path = ../MBSegueCollection/MBGateOpenInsideSegue.h; sourceTree = "<group>"; };
+		506479DA1A587F7F0005983C /* MBGateOpenInsideSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBGateOpenInsideSegue.m; path = ../MBSegueCollection/MBGateOpenInsideSegue.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +146,8 @@
 				506479D41A55EC570005983C /* MBSimpleSplitOpenSegue.m */,
 				506479D61A55FC980005983C /* MBSimpleSplitCloseSegue.h */,
 				506479D71A55FC980005983C /* MBSimpleSplitCloseSegue.m */,
+				506479D91A587F7F0005983C /* MBGateOpenInsideSegue.h */,
+				506479DA1A587F7F0005983C /* MBGateOpenInsideSegue.m */,
 			);
 			name = MBSegueCollection;
 			sourceTree = "<group>";
@@ -248,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				506479CE1A55989B0005983C /* MBSegue.m in Sources */,
+				506479DB1A587F7F0005983C /* MBGateOpenInsideSegue.m in Sources */,
 				506479AF1A5597190005983C /* ViewController.m in Sources */,
 				506479D81A55FC980005983C /* MBSimpleSplitCloseSegue.m in Sources */,
 				506479D21A55B5280005983C /* MBFadeSegue.m in Sources */,

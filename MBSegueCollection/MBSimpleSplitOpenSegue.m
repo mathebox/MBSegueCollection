@@ -62,13 +62,8 @@
                           delay:self.delay
                         options:self.options
                      animations:^{
-                         CGPoint newLeftCenter = leftSide.center;
-                         newLeftCenter.x -= leftSide.bounds.size.width/2;
-                         leftSide.center = newLeftCenter;
-
-                         CGPoint newRightCenter = rightSide.center;
-                         newRightCenter.x += rightSide.bounds.size.width/2;
-                         rightSide.center = newRightCenter;
+                         leftSide.layer.transform = CATransform3DMakeTranslation(-leftSide.bounds.size.width/2, 0, 0);
+                         rightSide.layer.transform = CATransform3DMakeTranslation(rightSide.bounds.size.width/2, 0, 0);
                      }
                      completion:^(BOOL finished) {
                          [rightSide removeFromSuperview];

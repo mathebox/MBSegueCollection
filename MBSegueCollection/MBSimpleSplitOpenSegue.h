@@ -31,8 +31,4 @@
 
 @interface MBSimpleSplitOpenSegue : MBSegue
 
-@property (nonatomic, assign) NSTimeInterval duration;
-@property (nonatomic, assign) NSTimeInterval delay;
-@property (nonatomic, assign) UIViewAnimationOptions options;
-
 @end

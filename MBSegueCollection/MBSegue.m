@@ -43,6 +43,9 @@
     self = [super initWithIdentifier:identifier source:source destination:destination];
     if (self) {
         self.type = MBSegueTypePresent;
+        self.duration = 0.5;
+        self.delay = 0.0;
+        self.options = UIViewAnimationOptionCurveEaseInOut;
     }
 
     return self;

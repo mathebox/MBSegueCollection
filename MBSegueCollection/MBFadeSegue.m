@@ -31,19 +31,6 @@
 
 @implementation MBFadeSegue
 
-- (instancetype)initWithIdentifier:(NSString *)identifier
-                            source:(UIViewController *)source
-                       destination:(UIViewController *)destination
-{
-    self = [super initWithIdentifier:identifier source:source destination:destination];
-    if (self) {
-        self.duration = 0.5;
-        self.delay = 0.0;
-        self.options = UIViewAnimationOptionCurveEaseInOut;
-    }
-    return self;
-}
-
 - (void)perform
 {
     UIViewController *sourceViewController = self.sourceViewController;

@@ -37,6 +37,9 @@ typedef NS_ENUM(NSUInteger, MBSegueType) {
 @interface MBSegue : UIStoryboardSegue
 
 @property (nonatomic, assign) MBSegueType type;
+@property (nonatomic, assign) NSTimeInterval duration;
+@property (nonatomic, assign) NSTimeInterval delay;
+@property (nonatomic, assign) UIViewAnimationOptions options;
 
 - (UIView *)sourceViewSnapshot;
 - (UIView *)destinationViewSnapshot;

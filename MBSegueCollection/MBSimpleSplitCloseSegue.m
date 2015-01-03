@@ -39,7 +39,6 @@
     if (self) {
         self.duration = 0.75;
         self.delay = 0.25;
-        self.options = UIViewAnimationOptionCurveEaseInOut;
     }
     return self;
 }

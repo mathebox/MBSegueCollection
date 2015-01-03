@@ -71,28 +71,21 @@ All segues can be used to present new view controllers or to dismiss one or mult
 
 **Note: It’s very important to set the `type` of the MBSegue to `MBSegueTypeDismiss`. Otherwise it will break your application.**
 
+# Customize
+The following properties of all segues are customizable:
+- **duration** (NSTimeInterval)
+- **delay** (NSTimeInterval)
+- **options** (UIViewAnimationOptions)
+
 # Demo
-This section lists all segues and their customizable properties.
 ### Fade
  ![fade segue](https://raw.githubusercontent.com/mathebox/MBSegueCollection/master/assets/segue_fade.gif)
-
-- **duration**
-- **delay**
-- **options** (UIViewAnimationOptions)
 
 ### Simple Slide Open
  ![simple slide open segue](https://raw.githubusercontent.com/mathebox/MBSegueCollection/master/assets/segue_simple_slide_open.gif)
 
-- **duration**
-- **delay**
-- **options** (UIViewAnimationOptions)
-
 ### Simple Slide Close
  ![simple slide open segue](https://raw.githubusercontent.com/mathebox/MBSegueCollection/master/assets/segue_simple_slide_close.gif)
-
-- **duration**
-- **delay**
-- **options** (UIViewAnimationOptions)
 
 # Todo
 - more segues

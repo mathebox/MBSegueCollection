@@ -11,6 +11,7 @@
 #import "MBSimpleSplitOpenSegue.h"
 #import "MBSimpleSplitCloseSegue.h"
 #import "MBGateOpenInsideSegue.h"
+#import "MBGateCloseInsideSegue.h"
 
 @implementation ViewController
 
@@ -39,11 +40,17 @@
         split.type = MBSegueTypeDismiss;
         return split;
     } else if ([identifier isEqualToString:@"GateOpenInside"]) {
-        MBSegue *split = [[MBGateOpenInsideSegue alloc] initWithIdentifier:identifier
+        MBSegue *gate = [[MBGateOpenInsideSegue alloc] initWithIdentifier:identifier
+                                                                   source:fromViewController
+                                                              destination:toViewController];
+        gate.type = MBSegueTypeDismiss;
+        return gate;
+    } else if ([identifier isEqualToString:@"GateCloseInside"]) {
+        MBSegue *gate = [[MBGateCloseInsideSegue alloc] initWithIdentifier:identifier
                                                                     source:fromViewController
                                                                destination:toViewController];
-        split.type = MBSegueTypeDismiss;
-        return split;
+        gate.type = MBSegueTypeDismiss;
+        return gate;
     }
 
     return [super segueForUnwindingToViewController:toViewController

@@ -29,6 +29,10 @@
 
 #import "MBSegue.h"
 
+/**
+ `MBGateCloseOutsideSegue` splits the destination view vertically and animates both halves with a
+ door closing effect from the outside.
+ */
 @interface MBGateCloseOutsideSegue : MBSegue
 
 @end

@@ -51,8 +51,8 @@
     UIView *leftSide = self.sourceViewSnapshot;
     UIView *rightSide = self.sourceViewSnapshot;
 
-    [self maskLeftSideOfView:leftSide];
-    [self maskRightSideOfView:rightSide];
+    [self maskLeftSideOfView:rightSide];
+    [self maskRightSideOfView:leftSide];
 
     [sourceViewController.view addSubview:destinationViewSnapshot];
     [sourceViewController.view addSubview:leftSide];

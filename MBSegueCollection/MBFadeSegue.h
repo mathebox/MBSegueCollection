@@ -29,6 +29,10 @@
 
 #import "MBSegue.h"
 
+/**
+ `MBFadeSegue` creates a fade effect for the transition between source and destination view
+ controller.
+ */
 @interface MBFadeSegue : MBSegue
 
 @end

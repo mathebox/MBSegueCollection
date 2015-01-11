@@ -52,8 +52,8 @@
     UIView *leftSide = self.sourceViewSnapshot;
     UIView *rightSide = self.sourceViewSnapshot;
 
-    [self maskLeftSideOfView:leftSide];
-    [self maskRightSideOfView:rightSide];
+    [self maskLeftSideOfView:rightSide];
+    [self maskRightSideOfView:leftSide];
 
     [self setAnchorPoint:CGPointMake(0, 0.5) forView:leftSide];
     [self setAnchorPoint:CGPointMake(1, 0.5) forView:rightSide];

@@ -29,6 +29,10 @@
 
 #import "MBSegue.h"
 
+/**
+ `MBGateOpenInsideSegue` splits the source view vertically and animates both halves with a
+ door opening effect to the inside.
+ */
 @interface MBGateOpenInsideSegue : MBSegue
 
 @end

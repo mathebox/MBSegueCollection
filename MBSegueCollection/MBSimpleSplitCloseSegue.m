@@ -50,8 +50,8 @@
     UIView *leftSide = self.destinationViewSnapshot;
     UIView *rightSide = self.destinationViewSnapshot;
 
-    [self maskLeftSideOfView:leftSide];
-    [self maskRightSideOfView:rightSide];
+    [self maskLeftSideOfView:rightSide];
+    [self maskRightSideOfView:leftSide];
 
     // Move sides out of screen
     leftSide.layer.transform = CATransform3DMakeTranslation(-leftSide.bounds.size.width/2, 0, 0);

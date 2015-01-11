@@ -29,6 +29,10 @@
 
 #import "MBSegue.h"
 
+/**
+ `MBSimpleSplitCloseSegue` splits the destination view vertically and covers the source view by
+ sliding in the halves from left and right side.
+ */
 @interface MBSimpleSplitCloseSegue : MBSegue
 
 @end

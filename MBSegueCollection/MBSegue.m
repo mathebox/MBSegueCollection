@@ -79,14 +79,14 @@
 
 - (void)maskLeftSideOfView:(UIView *)view
 {
-    CGRect rect = CGRectMake(view.bounds.origin.x, view.bounds.origin.y,
+    CGRect rect = CGRectMake(view.bounds.size.width/2, view.bounds.origin.y,
                              view.bounds.size.width/2, view.bounds.size.height);
     [self maskView:view withRect:rect];
 }
 
 - (void)maskRightSideOfView:(UIView *)view;
 {
-    CGRect rect = CGRectMake(view.bounds.size.width/2, view.bounds.origin.y,
+    CGRect rect = CGRectMake(view.bounds.origin.x, view.bounds.origin.y,
                              view.bounds.size.width/2, view.bounds.size.height);
     [self maskView:view withRect:rect];
 }

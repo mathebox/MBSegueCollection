@@ -78,14 +78,13 @@ The following properties of all segues are customizable:
 - **options** (UIViewAnimationOptions)
 
 # Demo
-### Fade
- ![fade segue](https://raw.githubusercontent.com/mathebox/MBSegueCollection/master/assets/segue_fade.gif)
-
-### Simple Slide Open
- ![simple slide open segue](https://raw.githubusercontent.com/mathebox/MBSegueCollection/master/assets/segue_simple_slide_open.gif)
-
-### Simple Slide Close
- ![simple slide open segue](https://raw.githubusercontent.com/mathebox/MBSegueCollection/master/assets/segue_simple_slide_close.gif)
+![simple slide open segue](https://raw.githubusercontent.com/mathebox/MBSegueCollection/master/assets/segue_simple_slide_open.gif)
+![simple slide open segue](https://raw.githubusercontent.com/mathebox/MBSegueCollection/master/assets/segue_simple_slide_close.gif)
+![gate open inside](https://raw.githubusercontent.com/mathebox/MBSegueCollection/master/assets/segue_gate_open_inside.gif)
+![gate close inside](https://raw.githubusercontent.com/mathebox/MBSegueCollection/master/assets/segue_gate_close_inside.gif)
+![gate open outside](https://raw.githubusercontent.com/mathebox/MBSegueCollection/master/assets/segue_gate_open_outside.gif)
+![gate close outside](https://raw.githubusercontent.com/mathebox/MBSegueCollection/master/assets/segue_gate_close_outside.gif)
+![fade segue](https://raw.githubusercontent.com/mathebox/MBSegueCollection/master/assets/segue_fade.gif)
 
 # Todo
 - more segues

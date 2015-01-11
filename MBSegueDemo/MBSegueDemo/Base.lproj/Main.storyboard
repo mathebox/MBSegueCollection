@@ -72,14 +72,26 @@
                                     <segue destination="gV9-Tw-P6E" kind="custom" customClass="MBGateCloseInsideSegue" id="69E-Xc-nBP"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uag-Mm-gku">
+                                <rect key="frame" x="234" y="255" width="133" height="30"/>
+                                <state key="normal" title="Gate Open Outside">
+                                    <color key="titleColor" red="1" green="0.94901960780000005" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="gV9-Tw-P6E" kind="custom" customClass="MBGateOpenOutsideSegue" id="B4k-od-eaH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.54117647059999996" green="0.12549019610000001" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="dBe-EN-ODC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="2Ed-fJ-1jq"/>
+                            <constraint firstItem="Uag-Mm-gku" firstAttribute="top" secondItem="YtL-En-Esg" secondAttribute="bottom" constant="8" id="2Kh-p6-lOf"/>
                             <constraint firstItem="YtL-En-Esg" firstAttribute="top" secondItem="fEL-X9-WbE" secondAttribute="bottom" constant="8" id="CB2-eW-kPm"/>
                             <constraint firstItem="fEL-X9-WbE" firstAttribute="top" secondItem="MJR-hD-zw0" secondAttribute="bottom" constant="8" id="EXB-qN-hGx"/>
                             <constraint firstAttribute="centerX" secondItem="MJR-hD-zw0" secondAttribute="centerX" id="HqL-2B-RnK"/>
                             <constraint firstAttribute="centerX" secondItem="zBy-gi-304" secondAttribute="centerX" id="LFH-nU-G3C"/>
+                            <constraint firstAttribute="centerX" secondItem="Uag-Mm-gku" secondAttribute="centerX" constant="-0.5" id="M3s-W3-cMw"/>
                             <constraint firstItem="MJR-hD-zw0" firstAttribute="top" secondItem="zBy-gi-304" secondAttribute="bottom" constant="8" id="PZf-Yy-HMX"/>
                             <constraint firstAttribute="centerX" secondItem="fEL-X9-WbE" secondAttribute="centerX" id="YaT-Qy-UXU"/>
                             <constraint firstAttribute="centerX" secondItem="dBe-EN-ODC" secondAttribute="centerX" id="ZXC-Ia-Sff"/>
@@ -166,10 +178,21 @@
                                     <segue destination="Ljl-Ii-CSj" kind="unwind" identifier="GateCloseInside" unwindAction="unwindToFirstViewController:" id="SPO-po-1cu"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r9P-3L-QBJ">
+                                <rect key="frame" x="234" y="256" width="133" height="30"/>
+                                <state key="normal" title="Gate Open Outside">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Ljl-Ii-CSj" kind="unwind" identifier="GateOpenOutside" unwindAction="unwindToFirstViewController:" id="OEi-XZ-gTI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="r9P-3L-QBJ" firstAttribute="top" secondItem="3Ux-9Q-pG7" secondAttribute="bottom" constant="8" id="7Fr-RE-MfG"/>
                             <constraint firstItem="5US-iq-6Gl" firstAttribute="top" secondItem="4sg-kD-eTe" secondAttribute="bottom" constant="8" id="7de-xg-9xi"/>
+                            <constraint firstAttribute="centerX" secondItem="r9P-3L-QBJ" secondAttribute="centerX" constant="-0.5" id="BBv-K0-ks0"/>
                             <constraint firstItem="WFT-Jq-8XI" firstAttribute="top" secondItem="yzO-LM-SJN" secondAttribute="bottom" constant="20" id="KQQ-AQ-6gI"/>
                             <constraint firstAttribute="centerX" secondItem="5US-iq-6Gl" secondAttribute="centerX" id="LFX-Qy-UH5"/>
                             <constraint firstAttribute="centerX" secondItem="yzO-LM-SJN" secondAttribute="centerX" constant="-0.5" id="WJB-fG-Fph"/>
@@ -259,17 +282,29 @@
                                     <segue destination="mUx-Wq-acS" kind="unwind" identifier="GateCloseInside" unwindAction="unwindToFirstViewController:" id="cUv-P5-crR"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EMt-nX-kC7">
+                                <rect key="frame" x="234" y="255" width="133" height="30"/>
+                                <state key="normal" title="Gate Open Outside">
+                                    <color key="titleColor" red="0.54117647059999996" green="0.12549019610000001" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="mUx-Wq-acS" kind="unwind" identifier="GateOpenOutside" unwindAction="unwindToFirstViewController:" id="DGl-y2-HnW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.94901960780000005" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="M0Q-Hf-nnH" firstAttribute="top" secondItem="NFP-ta-ehc" secondAttribute="bottom" constant="8" id="9m3-ud-Iau"/>
                             <constraint firstAttribute="centerX" secondItem="M0Q-Hf-nnH" secondAttribute="centerX" id="Epd-Wr-W1L"/>
                             <constraint firstAttribute="centerX" secondItem="aAM-bD-MXJ" secondAttribute="centerX" id="JT4-R8-JW0"/>
+                            <constraint firstItem="EMt-nX-kC7" firstAttribute="top" secondItem="aAM-bD-MXJ" secondAttribute="bottom" constant="8" id="Lnn-nT-BiE"/>
                             <constraint firstItem="aAM-bD-MXJ" firstAttribute="top" secondItem="M0Q-Hf-nnH" secondAttribute="bottom" constant="8" id="U3X-F5-43R"/>
                             <constraint firstAttribute="centerX" secondItem="mbL-YS-bMK" secondAttribute="centerX" id="WHP-6L-ojs"/>
                             <constraint firstItem="vfC-An-2Rm" firstAttribute="top" secondItem="8t5-sp-6Zf" secondAttribute="bottom" constant="8" id="WOm-3O-YHm"/>
                             <constraint firstItem="NFP-ta-ehc" firstAttribute="top" secondItem="mbL-YS-bMK" secondAttribute="bottom" constant="8" id="cVj-gk-4hK"/>
                             <constraint firstAttribute="centerX" secondItem="vfC-An-2Rm" secondAttribute="centerX" id="lGI-09-sQF"/>
+                            <constraint firstAttribute="centerX" secondItem="EMt-nX-kC7" secondAttribute="centerX" constant="-0.5" id="mH3-J6-zE2"/>
                             <constraint firstAttribute="centerX" secondItem="NFP-ta-ehc" secondAttribute="centerX" id="reg-zC-LUj"/>
                             <constraint firstItem="mbL-YS-bMK" firstAttribute="top" secondItem="JIX-mA-Q5M" secondAttribute="bottom" constant="8" id="sEp-ch-Jmr"/>
                             <constraint firstItem="JIX-mA-Q5M" firstAttribute="top" secondItem="vfC-An-2Rm" secondAttribute="bottom" constant="8" id="x0m-dE-cVO"/>

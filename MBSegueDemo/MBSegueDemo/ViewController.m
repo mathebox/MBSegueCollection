@@ -13,6 +13,7 @@
 #import "MBGateOpenInsideSegue.h"
 #import "MBGateCloseInsideSegue.h"
 #import "MBGateOpenOutsideSegue.h"
+#import "MBGateCloseOutsideSegue.h"
 
 @implementation ViewController
 
@@ -54,6 +55,12 @@
         return gate;
     } else if ([identifier isEqualToString:@"GateOpenOutside"]) {
         MBSegue *gate = [[MBGateOpenOutsideSegue alloc] initWithIdentifier:identifier
+                                                                    source:fromViewController
+                                                               destination:toViewController];
+        gate.type = MBSegueTypeDismiss;
+        return gate;
+    } else if ([identifier isEqualToString:@"GateCloseOutside"]) {
+        MBSegue *gate = [[MBGateCloseOutsideSegue alloc] initWithIdentifier:identifier
                                                                     source:fromViewController
                                                                destination:toViewController];
         gate.type = MBSegueTypeDismiss;

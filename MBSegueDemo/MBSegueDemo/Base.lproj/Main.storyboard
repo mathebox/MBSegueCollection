@@ -82,6 +82,16 @@
                                     <segue destination="gV9-Tw-P6E" kind="custom" customClass="MBGateOpenOutsideSegue" id="B4k-od-eaH"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3hI-sg-Mwa">
+                                <rect key="frame" x="233" y="293" width="134" height="30"/>
+                                <state key="normal" title="Gate Close Outside">
+                                    <color key="titleColor" red="1" green="0.94901960780000005" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="gV9-Tw-P6E" kind="custom" customClass="MBGateCloseOutsideSegue" id="xlo-eK-nV2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.54117647059999996" green="0.12549019610000001" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -90,6 +100,7 @@
                             <constraint firstItem="YtL-En-Esg" firstAttribute="top" secondItem="fEL-X9-WbE" secondAttribute="bottom" constant="8" id="CB2-eW-kPm"/>
                             <constraint firstItem="fEL-X9-WbE" firstAttribute="top" secondItem="MJR-hD-zw0" secondAttribute="bottom" constant="8" id="EXB-qN-hGx"/>
                             <constraint firstAttribute="centerX" secondItem="MJR-hD-zw0" secondAttribute="centerX" id="HqL-2B-RnK"/>
+                            <constraint firstAttribute="centerX" secondItem="3hI-sg-Mwa" secondAttribute="centerX" constant="-0.5" id="Js7-Qz-eW0"/>
                             <constraint firstAttribute="centerX" secondItem="zBy-gi-304" secondAttribute="centerX" id="LFH-nU-G3C"/>
                             <constraint firstAttribute="centerX" secondItem="Uag-Mm-gku" secondAttribute="centerX" constant="-0.5" id="M3s-W3-cMw"/>
                             <constraint firstItem="MJR-hD-zw0" firstAttribute="top" secondItem="zBy-gi-304" secondAttribute="bottom" constant="8" id="PZf-Yy-HMX"/>
@@ -99,6 +110,7 @@
                             <constraint firstItem="zBy-gi-304" firstAttribute="top" secondItem="UEI-eR-xgQ" secondAttribute="bottom" constant="8" id="jnc-vc-Nsd"/>
                             <constraint firstAttribute="centerX" secondItem="UEI-eR-xgQ" secondAttribute="centerX" id="rkM-WJ-L0S"/>
                             <constraint firstItem="UEI-eR-xgQ" firstAttribute="top" secondItem="dBe-EN-ODC" secondAttribute="bottom" constant="8" id="tvq-Cb-UPR"/>
+                            <constraint firstItem="3hI-sg-Mwa" firstAttribute="top" secondItem="Uag-Mm-gku" secondAttribute="bottom" constant="8" id="wR6-I9-fnL"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -187,14 +199,25 @@
                                     <segue destination="Ljl-Ii-CSj" kind="unwind" identifier="GateOpenOutside" unwindAction="unwindToFirstViewController:" id="OEi-XZ-gTI"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VE8-dI-jB7">
+                                <rect key="frame" x="233" y="294" width="134" height="30"/>
+                                <state key="normal" title="Gate Close Outside">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Ljl-Ii-CSj" kind="unwind" identifier="GateCloseOutside" unwindAction="unwindToFirstViewController:" id="aem-WG-i5I"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="VE8-dI-jB7" secondAttribute="centerX" id="0VI-6d-ODO"/>
                             <constraint firstItem="r9P-3L-QBJ" firstAttribute="top" secondItem="3Ux-9Q-pG7" secondAttribute="bottom" constant="8" id="7Fr-RE-MfG"/>
                             <constraint firstItem="5US-iq-6Gl" firstAttribute="top" secondItem="4sg-kD-eTe" secondAttribute="bottom" constant="8" id="7de-xg-9xi"/>
                             <constraint firstAttribute="centerX" secondItem="r9P-3L-QBJ" secondAttribute="centerX" constant="-0.5" id="BBv-K0-ks0"/>
                             <constraint firstItem="WFT-Jq-8XI" firstAttribute="top" secondItem="yzO-LM-SJN" secondAttribute="bottom" constant="20" id="KQQ-AQ-6gI"/>
                             <constraint firstAttribute="centerX" secondItem="5US-iq-6Gl" secondAttribute="centerX" id="LFX-Qy-UH5"/>
+                            <constraint firstItem="VE8-dI-jB7" firstAttribute="top" secondItem="r9P-3L-QBJ" secondAttribute="bottom" constant="8" id="LGv-ho-u08"/>
                             <constraint firstAttribute="centerX" secondItem="yzO-LM-SJN" secondAttribute="centerX" constant="-0.5" id="WJB-fG-Fph"/>
                             <constraint firstItem="4sg-kD-eTe" firstAttribute="top" secondItem="p7g-0f-7Xc" secondAttribute="bottom" constant="8" id="Z9j-UM-t0y"/>
                             <constraint firstItem="p7g-0f-7Xc" firstAttribute="top" secondItem="60v-7V-hwu" secondAttribute="bottom" constant="8" id="aUB-te-mnj"/>
@@ -292,6 +315,16 @@
                                     <segue destination="mUx-Wq-acS" kind="unwind" identifier="GateOpenOutside" unwindAction="unwindToFirstViewController:" id="DGl-y2-HnW"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12e-qJ-04m">
+                                <rect key="frame" x="233" y="293" width="134" height="30"/>
+                                <state key="normal" title="Gate Close Outside">
+                                    <color key="titleColor" red="0.54117647059999996" green="0.12549019610000001" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="mUx-Wq-acS" kind="unwind" identifier="GateCloseOutside" unwindAction="unwindToFirstViewController:" id="T80-gT-WrG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.94901960780000005" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -299,6 +332,8 @@
                             <constraint firstAttribute="centerX" secondItem="M0Q-Hf-nnH" secondAttribute="centerX" id="Epd-Wr-W1L"/>
                             <constraint firstAttribute="centerX" secondItem="aAM-bD-MXJ" secondAttribute="centerX" id="JT4-R8-JW0"/>
                             <constraint firstItem="EMt-nX-kC7" firstAttribute="top" secondItem="aAM-bD-MXJ" secondAttribute="bottom" constant="8" id="Lnn-nT-BiE"/>
+                            <constraint firstItem="12e-qJ-04m" firstAttribute="top" secondItem="EMt-nX-kC7" secondAttribute="bottom" constant="8" id="LpU-GG-C6P"/>
+                            <constraint firstAttribute="centerX" secondItem="12e-qJ-04m" secondAttribute="centerX" id="Rjp-rX-men"/>
                             <constraint firstItem="aAM-bD-MXJ" firstAttribute="top" secondItem="M0Q-Hf-nnH" secondAttribute="bottom" constant="8" id="U3X-F5-43R"/>
                             <constraint firstAttribute="centerX" secondItem="mbL-YS-bMK" secondAttribute="centerX" id="WHP-6L-ojs"/>
                             <constraint firstItem="vfC-An-2Rm" firstAttribute="top" secondItem="8t5-sp-6Zf" secondAttribute="bottom" constant="8" id="WOm-3O-YHm"/>
@@ -319,6 +354,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Y7f-On-cSx"/>
+        <segue reference="xlo-eK-nV2"/>
     </inferredMetricsTieBreakers>
 </document>

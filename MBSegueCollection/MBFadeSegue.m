@@ -49,8 +49,9 @@
                      }
                      completion:^(BOOL finished) {
                          [sourceViewSnapshot removeFromSuperview];
-                         [destinationViewSnapshot removeFromSuperview];
-                         [self showDestinationViewController];
+                         [self showDestinationViewController:^{
+                             [destinationViewSnapshot removeFromSuperview];
+                         }];
                      }
      ];
 }

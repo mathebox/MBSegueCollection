@@ -73,9 +73,10 @@
                          rightSide.layer.transform = CATransform3DIdentity;
                      }
                      completion:^(BOOL finished) {
-                         [rightSide removeFromSuperview];
-                         [leftSide removeFromSuperview];
-                         [self showDestinationViewController];
+                         [self showDestinationViewController:^{
+                             [rightSide removeFromSuperview];
+                             [leftSide removeFromSuperview];
+                         }];
                      }
      ];
 }

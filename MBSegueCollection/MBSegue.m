@@ -93,13 +93,18 @@
 
 - (void)showDestinationViewController
 {
+    [self showDestinationViewController:NULL];
+}
+
+- (void)showDestinationViewController:(void (^)())completion
+{
     if (self.type == MBSegueTypeDismiss) {
         [self.destinationViewController dismissViewControllerAnimated:NO
-                                                           completion:NULL];
+                                                           completion:completion];
     } else {
         [self.sourceViewController presentViewController:self.destinationViewController
                                                 animated:NO
-                                              completion:NULL];
+                                              completion:completion];
     }
 }
 

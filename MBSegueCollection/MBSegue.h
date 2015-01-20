@@ -112,7 +112,9 @@ typedef NS_ENUM(NSUInteger, MBSegueType) {
 
 /**
  Shows the destination view controller according the segue type without animation.
+
+ @param completion The block called after displaying the destination view controler.
  */
-- (void)showDestinationViewController;
+- (void)showDestinationViewController:(void (^)())completion;
 
 @end

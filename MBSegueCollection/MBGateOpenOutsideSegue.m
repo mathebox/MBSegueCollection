@@ -72,10 +72,11 @@
                          rightSide.layer.transform = CATransform3DRotate(t, M_PI/2, 0.0f, 1.0f, 0.0f);
                      }
                      completion:^(BOOL finished) {
-                         [rightSide removeFromSuperview];
-                         [leftSide removeFromSuperview];
-                         [destinationViewSnapshot removeFromSuperview];
-                         [self showDestinationViewController];
+                         [self showDestinationViewController:^{
+                             [rightSide removeFromSuperview];
+                             [leftSide removeFromSuperview];
+                             [destinationViewSnapshot removeFromSuperview];
+                         }];
                      }
      ];
 }

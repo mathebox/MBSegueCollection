@@ -66,10 +66,11 @@
                          rightSide.layer.transform = CATransform3DMakeTranslation(rightSide.bounds.size.width/2, 0, 0);
                      }
                      completion:^(BOOL finished) {
-                         [rightSide removeFromSuperview];
-                         [leftSide removeFromSuperview];
-                         [destinationViewSnapshot removeFromSuperview];
-                         [self showDestinationViewController];
+                         [self showDestinationViewController:^{
+                             [rightSide removeFromSuperview];
+                             [leftSide removeFromSuperview];
+                             [destinationViewSnapshot removeFromSuperview];
+                         }];
                      }
      ];
 }

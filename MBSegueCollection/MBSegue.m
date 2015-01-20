@@ -130,4 +130,29 @@
     view.layer.anchorPoint = anchorPoint;
 }
 
+#pragma - Shadows
+
+- (CALayer *)addLeftShadowToView:(UIView *)view withWidth:(CGFloat)shadowWidth
+{
+    return [self addShadowToView:view withSize:CGSizeMake(-shadowWidth, 0.f) withWidth:shadowWidth];
+}
+
+- (CALayer *)addRightShadowToView:(UIView *)view withWidth:(CGFloat)shadowWidth
+{
+    return [self addShadowToView:view withSize:CGSizeMake(shadowWidth, 0.f) withWidth:shadowWidth];
+}
+
+- (CALayer *)addShadowToView:(UIView *)view withSize:(CGSize)shadowSize withWidth:(CGFloat)shadowWidth
+{
+    CALayer* containerLayer = [CALayer layer];
+    containerLayer.shadowColor = [UIColor blackColor].CGColor;
+    containerLayer.shadowRadius = 2*shadowWidth;
+    containerLayer.shadowOffset = shadowSize;
+    containerLayer.shadowOpacity = 0.5f;
+
+    [containerLayer addSublayer:view.layer];
+
+    return containerLayer;
+}
+
 @end

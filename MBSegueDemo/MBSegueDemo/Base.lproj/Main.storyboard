@@ -52,8 +52,18 @@
                                     <segue destination="gV9-Tw-P6E" kind="custom" customClass="MBSimpleSplitCloseSegue" id="jsY-zt-GiL"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEL-X9-WbE">
-                                <rect key="frame" x="240" y="179" width="120" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q8O-PM-3f3">
+                                <rect key="frame" x="234" y="179" width="133" height="30"/>
+                                <state key="normal" title="Shadow Split Open">
+                                    <color key="titleColor" red="1" green="0.94901960780000005" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="gV9-Tw-P6E" kind="custom" customClass="MBShadowSplitOpenSegue" id="e2p-Qe-N8t"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEL-X9-WbE">
+                                <rect key="frame" x="236" y="217" width="120" height="30"/>
                                 <state key="normal" title="Gate Open Inside">
                                     <color key="titleColor" red="1" green="0.94901960780000005" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -62,8 +72,8 @@
                                     <segue destination="gV9-Tw-P6E" kind="custom" customClass="MBGateOpenInsideSegue" id="Y7f-On-cSx"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YtL-En-Esg">
-                                <rect key="frame" x="239" y="217" width="122" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YtL-En-Esg">
+                                <rect key="frame" x="235" y="255" width="122" height="30"/>
                                 <state key="normal" title="Gate Close Inside">
                                     <color key="titleColor" red="1" green="0.94901960780000005" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -72,8 +82,8 @@
                                     <segue destination="gV9-Tw-P6E" kind="custom" customClass="MBGateCloseInsideSegue" id="69E-Xc-nBP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uag-Mm-gku">
-                                <rect key="frame" x="234" y="255" width="133" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uag-Mm-gku">
+                                <rect key="frame" x="230" y="293" width="133" height="30"/>
                                 <state key="normal" title="Gate Open Outside">
                                     <color key="titleColor" red="1" green="0.94901960780000005" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -82,8 +92,8 @@
                                     <segue destination="gV9-Tw-P6E" kind="custom" customClass="MBGateOpenOutsideSegue" id="B4k-od-eaH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3hI-sg-Mwa">
-                                <rect key="frame" x="233" y="293" width="134" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3hI-sg-Mwa">
+                                <rect key="frame" x="229" y="331" width="134" height="30"/>
                                 <state key="normal" title="Gate Close Outside">
                                     <color key="titleColor" red="1" green="0.94901960780000005" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -97,6 +107,7 @@
                         <constraints>
                             <constraint firstItem="dBe-EN-ODC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="2Ed-fJ-1jq"/>
                             <constraint firstItem="Uag-Mm-gku" firstAttribute="top" secondItem="YtL-En-Esg" secondAttribute="bottom" constant="8" id="2Kh-p6-lOf"/>
+                            <constraint firstItem="fEL-X9-WbE" firstAttribute="top" secondItem="q8O-PM-3f3" secondAttribute="bottom" constant="8" id="72m-zC-bap"/>
                             <constraint firstItem="YtL-En-Esg" firstAttribute="top" secondItem="fEL-X9-WbE" secondAttribute="bottom" constant="8" id="CB2-eW-kPm"/>
                             <constraint firstItem="fEL-X9-WbE" firstAttribute="top" secondItem="MJR-hD-zw0" secondAttribute="bottom" constant="8" id="EXB-qN-hGx"/>
                             <constraint firstAttribute="centerX" secondItem="MJR-hD-zw0" secondAttribute="centerX" id="HqL-2B-RnK"/>
@@ -104,14 +115,21 @@
                             <constraint firstAttribute="centerX" secondItem="zBy-gi-304" secondAttribute="centerX" id="LFH-nU-G3C"/>
                             <constraint firstAttribute="centerX" secondItem="Uag-Mm-gku" secondAttribute="centerX" constant="-0.5" id="M3s-W3-cMw"/>
                             <constraint firstItem="MJR-hD-zw0" firstAttribute="top" secondItem="zBy-gi-304" secondAttribute="bottom" constant="8" id="PZf-Yy-HMX"/>
+                            <constraint firstAttribute="centerX" secondItem="q8O-PM-3f3" secondAttribute="centerX" constant="-0.5" id="Wfc-e8-FiR"/>
                             <constraint firstAttribute="centerX" secondItem="fEL-X9-WbE" secondAttribute="centerX" id="YaT-Qy-UXU"/>
                             <constraint firstAttribute="centerX" secondItem="dBe-EN-ODC" secondAttribute="centerX" id="ZXC-Ia-Sff"/>
+                            <constraint firstItem="q8O-PM-3f3" firstAttribute="top" secondItem="MJR-hD-zw0" secondAttribute="bottom" constant="8" id="f0a-ud-nWW"/>
                             <constraint firstAttribute="centerX" secondItem="YtL-En-Esg" secondAttribute="centerX" id="jKj-iI-JIp"/>
                             <constraint firstItem="zBy-gi-304" firstAttribute="top" secondItem="UEI-eR-xgQ" secondAttribute="bottom" constant="8" id="jnc-vc-Nsd"/>
                             <constraint firstAttribute="centerX" secondItem="UEI-eR-xgQ" secondAttribute="centerX" id="rkM-WJ-L0S"/>
                             <constraint firstItem="UEI-eR-xgQ" firstAttribute="top" secondItem="dBe-EN-ODC" secondAttribute="bottom" constant="8" id="tvq-Cb-UPR"/>
                             <constraint firstItem="3hI-sg-Mwa" firstAttribute="top" secondItem="Uag-Mm-gku" secondAttribute="bottom" constant="8" id="wR6-I9-fnL"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="EXB-qN-hGx"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -173,7 +191,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eIe-nA-XN6">
-                                <rect key="frame" x="240" y="180" width="120" height="30"/>
+                                <rect key="frame" x="240" y="218" width="120" height="30"/>
                                 <state key="normal" title="Gate Open Inside">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -182,7 +200,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ux-9Q-pG7">
-                                <rect key="frame" x="239" y="218" width="122" height="30"/>
+                                <rect key="frame" x="239" y="256" width="122" height="30"/>
                                 <state key="normal" title="Gate Close Inside">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -191,7 +209,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r9P-3L-QBJ">
-                                <rect key="frame" x="234" y="256" width="133" height="30"/>
+                                <rect key="frame" x="234" y="294" width="133" height="30"/>
                                 <state key="normal" title="Gate Open Outside">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -200,12 +218,21 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VE8-dI-jB7">
-                                <rect key="frame" x="233" y="294" width="134" height="30"/>
+                                <rect key="frame" x="233" y="332" width="134" height="30"/>
                                 <state key="normal" title="Gate Close Outside">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="Ljl-Ii-CSj" kind="unwind" identifier="GateCloseOutside" unwindAction="unwindToFirstViewController:" id="aem-WG-i5I"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTN-NR-Jaa">
+                                <rect key="frame" x="234" y="180" width="133" height="30"/>
+                                <state key="normal" title="Shadow Split Open">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Ljl-Ii-CSj" kind="unwind" identifier="ShadowSplitOpen" unwindAction="unwindToFirstViewController:" id="2y9-8V-ehu"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -214,22 +241,30 @@
                             <constraint firstAttribute="centerX" secondItem="VE8-dI-jB7" secondAttribute="centerX" id="0VI-6d-ODO"/>
                             <constraint firstItem="r9P-3L-QBJ" firstAttribute="top" secondItem="3Ux-9Q-pG7" secondAttribute="bottom" constant="8" id="7Fr-RE-MfG"/>
                             <constraint firstItem="5US-iq-6Gl" firstAttribute="top" secondItem="4sg-kD-eTe" secondAttribute="bottom" constant="8" id="7de-xg-9xi"/>
+                            <constraint firstItem="bTN-NR-Jaa" firstAttribute="top" secondItem="5US-iq-6Gl" secondAttribute="bottom" constant="8" id="AXR-aV-Fju"/>
                             <constraint firstAttribute="centerX" secondItem="r9P-3L-QBJ" secondAttribute="centerX" constant="-0.5" id="BBv-K0-ks0"/>
                             <constraint firstItem="WFT-Jq-8XI" firstAttribute="top" secondItem="yzO-LM-SJN" secondAttribute="bottom" constant="20" id="KQQ-AQ-6gI"/>
                             <constraint firstAttribute="centerX" secondItem="5US-iq-6Gl" secondAttribute="centerX" id="LFX-Qy-UH5"/>
                             <constraint firstItem="VE8-dI-jB7" firstAttribute="top" secondItem="r9P-3L-QBJ" secondAttribute="bottom" constant="8" id="LGv-ho-u08"/>
                             <constraint firstAttribute="centerX" secondItem="yzO-LM-SJN" secondAttribute="centerX" constant="-0.5" id="WJB-fG-Fph"/>
                             <constraint firstItem="4sg-kD-eTe" firstAttribute="top" secondItem="p7g-0f-7Xc" secondAttribute="bottom" constant="8" id="Z9j-UM-t0y"/>
+                            <constraint firstItem="eIe-nA-XN6" firstAttribute="top" secondItem="bTN-NR-Jaa" secondAttribute="bottom" constant="8" id="a85-Ml-eNA"/>
                             <constraint firstItem="p7g-0f-7Xc" firstAttribute="top" secondItem="60v-7V-hwu" secondAttribute="bottom" constant="8" id="aUB-te-mnj"/>
                             <constraint firstItem="60v-7V-hwu" firstAttribute="top" secondItem="Yxf-dY-B1Z" secondAttribute="bottom" constant="8" id="cEh-4H-0Ld"/>
                             <constraint firstAttribute="centerX" secondItem="60v-7V-hwu" secondAttribute="centerX" id="r4b-Yf-1sT"/>
                             <constraint firstAttribute="centerX" secondItem="eIe-nA-XN6" secondAttribute="centerX" id="rfA-S4-CNF"/>
                             <constraint firstItem="3Ux-9Q-pG7" firstAttribute="top" secondItem="eIe-nA-XN6" secondAttribute="bottom" constant="8" id="ush-3U-Rfa"/>
+                            <constraint firstAttribute="centerX" secondItem="bTN-NR-Jaa" secondAttribute="centerX" constant="-0.5" id="wW2-yB-2bA"/>
                             <constraint firstItem="eIe-nA-XN6" firstAttribute="top" secondItem="5US-iq-6Gl" secondAttribute="bottom" constant="8" id="wm7-yH-lTx"/>
                             <constraint firstAttribute="centerX" secondItem="4sg-kD-eTe" secondAttribute="centerX" id="xrN-jt-zU4"/>
                             <constraint firstAttribute="centerX" secondItem="3Ux-9Q-pG7" secondAttribute="centerX" id="yVf-Ri-EYY"/>
                             <constraint firstAttribute="centerX" secondItem="p7g-0f-7Xc" secondAttribute="centerX" id="ydG-WH-wAF"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="wm7-yH-lTx"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NfS-lB-7gI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -286,7 +321,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M0Q-Hf-nnH">
-                                <rect key="frame" x="240" y="179" width="120" height="30"/>
+                                <rect key="frame" x="240" y="217" width="120" height="30"/>
                                 <state key="normal" title="Gate Open Inside">
                                     <color key="titleColor" red="0.54117647059999996" green="0.12549019610000001" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -296,7 +331,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAM-bD-MXJ">
-                                <rect key="frame" x="239" y="217" width="122" height="30"/>
+                                <rect key="frame" x="239" y="255" width="122" height="30"/>
                                 <state key="normal" title="Gate Close Inside">
                                     <color key="titleColor" red="0.54117647059999996" green="0.12549019610000001" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -306,7 +341,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EMt-nX-kC7">
-                                <rect key="frame" x="234" y="255" width="133" height="30"/>
+                                <rect key="frame" x="234" y="293" width="133" height="30"/>
                                 <state key="normal" title="Gate Open Outside">
                                     <color key="titleColor" red="0.54117647059999996" green="0.12549019610000001" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -316,7 +351,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12e-qJ-04m">
-                                <rect key="frame" x="233" y="293" width="134" height="30"/>
+                                <rect key="frame" x="233" y="331" width="134" height="30"/>
                                 <state key="normal" title="Gate Close Outside">
                                     <color key="titleColor" red="0.54117647059999996" green="0.12549019610000001" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -325,11 +360,22 @@
                                     <segue destination="mUx-Wq-acS" kind="unwind" identifier="GateCloseOutside" unwindAction="unwindToFirstViewController:" id="T80-gT-WrG"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OJa-cb-UqB">
+                                <rect key="frame" x="234" y="179" width="133" height="30"/>
+                                <state key="normal" title="Shadow Split Open">
+                                    <color key="titleColor" red="0.54117647059999996" green="0.12549019610000001" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="mUx-Wq-acS" kind="unwind" identifier="ShadowSplitOpen" unwindAction="unwindToFirstViewController:" id="F5a-he-Afn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.94901960780000005" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="M0Q-Hf-nnH" firstAttribute="top" secondItem="NFP-ta-ehc" secondAttribute="bottom" constant="8" id="9m3-ud-Iau"/>
                             <constraint firstAttribute="centerX" secondItem="M0Q-Hf-nnH" secondAttribute="centerX" id="Epd-Wr-W1L"/>
+                            <constraint firstAttribute="centerX" secondItem="OJa-cb-UqB" secondAttribute="centerX" constant="-0.5" id="I6P-4D-BIE"/>
                             <constraint firstAttribute="centerX" secondItem="aAM-bD-MXJ" secondAttribute="centerX" id="JT4-R8-JW0"/>
                             <constraint firstItem="EMt-nX-kC7" firstAttribute="top" secondItem="aAM-bD-MXJ" secondAttribute="bottom" constant="8" id="Lnn-nT-BiE"/>
                             <constraint firstItem="12e-qJ-04m" firstAttribute="top" secondItem="EMt-nX-kC7" secondAttribute="bottom" constant="8" id="LpU-GG-C6P"/>
@@ -337,14 +383,21 @@
                             <constraint firstItem="aAM-bD-MXJ" firstAttribute="top" secondItem="M0Q-Hf-nnH" secondAttribute="bottom" constant="8" id="U3X-F5-43R"/>
                             <constraint firstAttribute="centerX" secondItem="mbL-YS-bMK" secondAttribute="centerX" id="WHP-6L-ojs"/>
                             <constraint firstItem="vfC-An-2Rm" firstAttribute="top" secondItem="8t5-sp-6Zf" secondAttribute="bottom" constant="8" id="WOm-3O-YHm"/>
+                            <constraint firstItem="OJa-cb-UqB" firstAttribute="top" secondItem="NFP-ta-ehc" secondAttribute="bottom" constant="8" id="aXj-7w-w96"/>
                             <constraint firstItem="NFP-ta-ehc" firstAttribute="top" secondItem="mbL-YS-bMK" secondAttribute="bottom" constant="8" id="cVj-gk-4hK"/>
                             <constraint firstAttribute="centerX" secondItem="vfC-An-2Rm" secondAttribute="centerX" id="lGI-09-sQF"/>
                             <constraint firstAttribute="centerX" secondItem="EMt-nX-kC7" secondAttribute="centerX" constant="-0.5" id="mH3-J6-zE2"/>
+                            <constraint firstItem="M0Q-Hf-nnH" firstAttribute="top" secondItem="OJa-cb-UqB" secondAttribute="bottom" constant="8" id="qd6-ho-mnv"/>
                             <constraint firstAttribute="centerX" secondItem="NFP-ta-ehc" secondAttribute="centerX" id="reg-zC-LUj"/>
                             <constraint firstItem="mbL-YS-bMK" firstAttribute="top" secondItem="JIX-mA-Q5M" secondAttribute="bottom" constant="8" id="sEp-ch-Jmr"/>
                             <constraint firstItem="JIX-mA-Q5M" firstAttribute="top" secondItem="vfC-An-2Rm" secondAttribute="bottom" constant="8" id="x0m-dE-cVO"/>
                             <constraint firstAttribute="centerX" secondItem="JIX-mA-Q5M" secondAttribute="centerX" id="y7O-bm-cLm"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="9m3-ud-Iau"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ejv-gV-qW8" userLabel="First Responder" sceneMemberID="firstResponder"/>

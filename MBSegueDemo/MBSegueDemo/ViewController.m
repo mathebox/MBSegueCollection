@@ -14,6 +14,7 @@
 #import "MBGateCloseInsideSegue.h"
 #import "MBGateOpenOutsideSegue.h"
 #import "MBGateCloseOutsideSegue.h"
+#import "MBShadowSplitOpenSegue.h"
 
 @implementation ViewController
 
@@ -65,6 +66,12 @@
                                                                destination:toViewController];
         gate.type = MBSegueTypeDismiss;
         return gate;
+    } else if ([identifier isEqualToString:@"ShadowSplitOpen"]) {
+        MBSegue *split = [[MBShadowSplitOpenSegue alloc] initWithIdentifier:identifier
+                                                                      source:fromViewController
+                                                                 destination:toViewController];
+        split.type = MBSegueTypeDismiss;
+        return split;
     }
 
     return [super segueForUnwindingToViewController:toViewController

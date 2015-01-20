@@ -117,4 +117,35 @@ typedef NS_ENUM(NSUInteger, MBSegueType) {
  */
 - (void)showDestinationViewController:(void (^)())completion;
 
+/**
+ Add a shadow on the left side of a view with a given width.
+
+ @param view The view that needs a shadow
+ @param shadowWidth The width of the shadow
+
+ @return A layer containing the view with the shadow
+ */
+- (CALayer *)addLeftShadowToView:(UIView *)view withWidth:(CGFloat)shadowWidth;
+
+/**
+ Add a shadow on the right side of a view with a given width.
+
+ @param view The view that needs a shadow
+ @param shadowWidth The width of the shadow
+
+ @return A layer containing the view with the shadow
+ */
+- (CALayer *)addRightShadowToView:(UIView *)view withWidth:(CGFloat)shadowWidth;
+
+/**
+ Add a shadow on the right side of a view with a given width.
+
+ @param view The view that needs a shadow
+ @param shadowSize The size of the shadow
+ @param shadowWidth The width of the shadow
+
+ @return A layer containing the view with the shadow
+ */
+- (CALayer *)addShadowToView:(UIView *)view withSize:(CGSize)shadowSize withWidth:(CGFloat)shadowWidth;
+
 @end

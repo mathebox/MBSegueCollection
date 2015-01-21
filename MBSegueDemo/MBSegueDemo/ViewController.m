@@ -15,6 +15,7 @@
 #import "MBGateOpenOutsideSegue.h"
 #import "MBGateCloseOutsideSegue.h"
 #import "MBShadowSplitOpenSegue.h"
+#import "MBShadowSplitCloseSegue.h"
 
 @implementation ViewController
 
@@ -70,6 +71,12 @@
         MBSegue *split = [[MBShadowSplitOpenSegue alloc] initWithIdentifier:identifier
                                                                       source:fromViewController
                                                                  destination:toViewController];
+        split.type = MBSegueTypeDismiss;
+        return split;
+    } else if ([identifier isEqualToString:@"ShadowSplitClose"]) {
+        MBSegue *split = [[MBShadowSplitCloseSegue alloc] initWithIdentifier:identifier
+                                                                     source:fromViewController
+                                                                destination:toViewController];
         split.type = MBSegueTypeDismiss;
         return split;
     }

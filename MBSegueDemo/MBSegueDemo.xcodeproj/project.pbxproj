@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5016E7E31A6E3F6700F5FD73 /* MBShadowSplitOpenSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 5016E7E21A6E3F6700F5FD73 /* MBShadowSplitOpenSegue.m */; };
+		5016E7E61A6E451E00F5FD73 /* MBShadowSplitCloseSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 5016E7E51A6E451E00F5FD73 /* MBShadowSplitCloseSegue.m */; };
 		506479A91A5597190005983C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 506479A81A5597190005983C /* main.m */; };
 		506479AC1A5597190005983C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 506479AB1A5597190005983C /* AppDelegate.m */; };
 		506479AF1A5597190005983C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 506479AE1A5597190005983C /* ViewController.m */; };
@@ -38,6 +39,8 @@
 /* Begin PBXFileReference section */
 		5016E7E11A6E3F6600F5FD73 /* MBShadowSplitOpenSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBShadowSplitOpenSegue.h; path = ../MBSegueCollection/MBShadowSplitOpenSegue.h; sourceTree = "<group>"; };
 		5016E7E21A6E3F6700F5FD73 /* MBShadowSplitOpenSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBShadowSplitOpenSegue.m; path = ../MBSegueCollection/MBShadowSplitOpenSegue.m; sourceTree = "<group>"; };
+		5016E7E41A6E451E00F5FD73 /* MBShadowSplitCloseSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBShadowSplitCloseSegue.h; path = ../MBSegueCollection/MBShadowSplitCloseSegue.h; sourceTree = "<group>"; };
+		5016E7E51A6E451E00F5FD73 /* MBShadowSplitCloseSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBShadowSplitCloseSegue.m; path = ../MBSegueCollection/MBShadowSplitCloseSegue.m; sourceTree = "<group>"; };
 		506479A31A5597190005983C /* MBSegueDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MBSegueDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		506479A71A5597190005983C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		506479A81A5597190005983C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -160,6 +163,8 @@
 				506479D71A55FC980005983C /* MBSimpleSplitCloseSegue.m */,
 				5016E7E11A6E3F6600F5FD73 /* MBShadowSplitOpenSegue.h */,
 				5016E7E21A6E3F6700F5FD73 /* MBShadowSplitOpenSegue.m */,
+				5016E7E41A6E451E00F5FD73 /* MBShadowSplitCloseSegue.h */,
+				5016E7E51A6E451E00F5FD73 /* MBShadowSplitCloseSegue.m */,
 				506479D91A587F7F0005983C /* MBGateOpenInsideSegue.h */,
 				506479DA1A587F7F0005983C /* MBGateOpenInsideSegue.m */,
 				506479DC1A58AA8B0005983C /* MBGateCloseInsideSegue.h */,
@@ -273,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				506479CE1A55989B0005983C /* MBSegue.m in Sources */,
+				5016E7E61A6E451E00F5FD73 /* MBShadowSplitCloseSegue.m in Sources */,
 				506479DE1A58AA8B0005983C /* MBGateCloseInsideSegue.m in Sources */,
 				506479DB1A587F7F0005983C /* MBGateOpenInsideSegue.m in Sources */,
 				506479E11A58B2DE0005983C /* MBGateOpenOutsideSegue.m in Sources */,

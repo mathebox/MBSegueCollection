@@ -2,7 +2,7 @@
 
 MBSegueCollection is a growing collection of different custom segues for iOS 6 or later. All segues can be used to present or to dismiss view controllers.
 
-[![Build Status](https://img.shields.io/travis/mathebox/MBSegueCollection.svg?style=flat)](https://travis-ci.org/mathebox/MBSegueCollection) [![Cocoapods](https://img.shields.io/cocoapods/v/MBSegueCollection.svg?style=flat)](http://cocoapods.org/?q=mbseguecollection) ![Platform](https://img.shields.io/cocoapods/p/MBSegueCollection.svg?style=flat) ![License](https://img.shields.io/cocoapods/l/MBSegueCollection.svg?style=flat)
+[![Build Status](https://img.shields.io/travis/mathebox/MBSegueCollection.svg?style=flat)](https://travis-ci.org/mathebox/MBSegueCollection) [![CocoaPods](https://img.shields.io/cocoapods/v/MBSegueCollection.svg?style=flat)](http://cocoapods.org/?q=mbseguecollection) ![Platform](https://img.shields.io/cocoapods/p/MBSegueCollection.svg?style=flat) ![License](https://img.shields.io/cocoapods/l/MBSegueCollection.svg?style=flat)
 
 # Install
 - Requirement: iOS 6
